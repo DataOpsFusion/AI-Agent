@@ -1,0 +1,509 @@
+{
+  "name": "Stocks",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -240,
+        260
+      ],
+      "id": "06765a5f-be73-40ec-8ca3-99505272f2f2",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://yahoo-finance15.p.rapidapi.com/api/v2/markets/tickers?",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "type",
+              "value": "STOCKS"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-rapidapi-host",
+              "value": "yahoo-finance15.p.rapidapi.com"
+            },
+            {
+              "name": "x-rapidapi-key",
+              "value": "a1c119b9c3mshae18ac96db0c1c0p12342cjsn80f3e5bbe968"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -20,
+        -40
+      ],
+      "id": "16be770e-c46b-49a9-8b2a-437472aba7cf",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "url": "https://yahoo-finance15.p.rapidapi.com/api/v2/markets/tickers?",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "page",
+              "value": "2"
+            },
+            {
+              "name": "type",
+              "value": "STOCKS"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-rapidapi-host",
+              "value": "yahoo-finance15.p.rapidapi.com"
+            },
+            {
+              "name": "x-rapidapi-key",
+              "value": "a1c119b9c3mshae18ac96db0c1c0p12342cjsn80f3e5bbe968"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -20,
+        160
+      ],
+      "id": "18ec205f-2925-4e65-a6e9-71c45806202e",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "url": "https://yahoo-finance15.p.rapidapi.com/api/v2/markets/tickers?",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "page",
+              "value": "3"
+            },
+            {
+              "name": "type",
+              "value": "STOCKS"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-rapidapi-host",
+              "value": "yahoo-finance15.p.rapidapi.com"
+            },
+            {
+              "name": "x-rapidapi-key",
+              "value": "a1c119b9c3mshae18ac96db0c1c0p12342cjsn80f3e5bbe968"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -20,
+        360
+      ],
+      "id": "dae97b47-3791-42d1-b3ff-96362c2ad14d",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "url": "https://yahoo-finance15.p.rapidapi.com/api/v2/markets/tickers?",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "page",
+              "value": "4"
+            },
+            {
+              "name": "type",
+              "value": "STOCKS"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-rapidapi-host",
+              "value": "yahoo-finance15.p.rapidapi.com"
+            },
+            {
+              "name": "x-rapidapi-key",
+              "value": "a1c119b9c3mshae18ac96db0c1c0p12342cjsn80f3e5bbe968"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -20,
+        560
+      ],
+      "id": "f91e5086-8ebe-41d6-9381-2f96dbb907a7",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return $json.body.map(entry => {\n  return {\n    json: entry\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        -40
+      ],
+      "id": "893c786d-98d9-4ec3-9775-0a7d2ad3b0b6",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "jsCode": "return $json.body.map(entry => {\n  return {\n    json: entry\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        160
+      ],
+      "id": "76e880dd-7f5f-4aa1-a44f-8d6225efe7e1",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "jsCode": "return $json.body.map(entry => {\n  return {\n    json: entry\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        360
+      ],
+      "id": "390729b0-e820-48d6-ae37-a6a4baef1b02",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "jsCode": "return $json.body.map(entry => {\n  return {\n    json: entry\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        560
+      ],
+      "id": "fffddf54-50d3-4dc4-a06b-35a9b436d779",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        420,
+        240
+      ],
+      "id": "a9824062-c9ce-4a13-b0b0-67c15eb8a427",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "options": {
+          "delimiter": ",",
+          "fileName": "Stocks",
+          "headerRow": true
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        120
+      ],
+      "id": "17f95122-5f13-4c41-8acb-d96a5fe02fb5",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "stocks_data",
+          "mode": "list",
+          "cachedResultName": "stocks_data"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "symbol",
+              "value": "={{ $json.symbol }}"
+            },
+            {
+              "column": "name",
+              "value": "={{ $json.name }}"
+            },
+            {
+              "column": "lastsale",
+              "value": "={{ $json.lastsale }}"
+            },
+            {
+              "column": "netchange",
+              "value": "={{ $json.netchange }}"
+            },
+            {
+              "column": "pctchange",
+              "value": "={{ $json.pctchange }}"
+            },
+            {
+              "column": "marketCap",
+              "value": "={{ $json.marketCap }}"
+            },
+            {
+              "column": "date",
+              "value": "={{ $json.date }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        740,
+        380
+      ],
+      "id": "7d91ed53-2dc6-4a6b-81da-580a75677925",
+      "name": "MySQL",
+      "credentials": {
+        "mySql": {
+          "id": "WUZOsrMNiPCoIy1n",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const input = item.json;\n\n  // Clean dollar and percent signs\n  const parseDollar = val => parseFloat(val.replace(/[$,]/g, ''));\n  const parsePercent = val => parseFloat(val.replace('%', ''));\n\n  // Get today's date in YYYY-MM-DD\n  const now = new Date();\n  const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;\n\n  return {\n    json: {\n      symbol: input.symbol,\n      name: input.name,\n      lastsale: parseDollar(input.lastsale),\n      netchange: parseFloat(input.netchange),\n      pctchange: parsePercent(input.pctchange),\n      marketCap: parseInt(input.marketCap.replace(/,/g, '')),\n      date\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        260
+      ],
+      "id": "d97d62e5-3152-4112-8d38-78f070307c11",
+      "name": "Code4"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "MySQL",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b8bd2d94-9f41-4501-808a-3d86372e238c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "06a332869c2aab9655d2910767ec8c7e7b40f796b7d1f8b83fcb933cc2b73214"
+  },
+  "id": "YnGeiRNzSnj11QUH",
+  "tags": [
+    {
+      "name": "ATTENTION:RNN",
+      "id": "cmZnxe7C4baOeMWj",
+      "createdAt": "2025-04-24T22:41:11.625Z",
+      "updatedAt": "2025-04-24T22:41:11.625Z"
+    },
+    {
+      "name": "stocks",
+      "id": "gvpf3T5x1MZK6Drm",
+      "createdAt": "2025-04-24T22:40:58.811Z",
+      "updatedAt": "2025-04-24T22:40:58.811Z"
+    },
+    {
+      "name": "API",
+      "id": "rwjK9GwCfPXswYQV",
+      "createdAt": "2025-04-24T22:40:59.967Z",
+      "updatedAt": "2025-04-24T22:40:59.967Z"
+    }
+  ]
+}

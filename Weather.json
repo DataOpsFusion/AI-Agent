@@ -1,0 +1,517 @@
+{
+  "name": "Weather",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -620,
+        460
+      ],
+      "id": "6a18803d-1d6d-4189-aef7-16b920fef339",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "danang",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        560
+      ],
+      "id": "283482b3-0b0d-44a8-9940-9eafc28dfc57",
+      "name": "MongoDB",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "danang"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        560
+      ],
+      "id": "2af23a52-c1ec-4713-8dc0-5b9201c4ea6f",
+      "name": "da nang",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "hanoi"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        380
+      ],
+      "id": "e475c466-c1f4-42e5-8382-29f29e8149ac",
+      "name": "ha noi",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "toronto"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        60
+      ],
+      "id": "b52c2c51-1543-4e99-9ead-9081ec902fe7",
+      "name": "toronto",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "denver"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        220
+      ],
+      "id": "1eb34921-03fc-46b0-a3aa-1f108ce9bf30",
+      "name": "denver",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "sydney"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        760
+      ],
+      "id": "7564f070-d60f-452c-b3ac-291500cff097",
+      "name": "sydney",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "markham"
+      },
+      "type": "n8n-nodes-base.openWeatherMap",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        940
+      ],
+      "id": "2c9f16f5-10e6-411a-be68-0a28b960d76a",
+      "name": "markham",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "fO24kiZphCuL8NbA",
+          "name": "OpenWeatherMap account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "hanoi",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        380
+      ],
+      "id": "cae6736e-e2e2-4b61-888c-57bec7cd6a75",
+      "name": "MongoDB1",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "toronto",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        60
+      ],
+      "id": "83ec371c-a117-4e5f-af73-2bd6dda1e405",
+      "name": "MongoDB2",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "sydney",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        760
+      ],
+      "id": "157e2546-6618-409d-b788-06312614be95",
+      "name": "MongoDB3",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "markham",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        940
+      ],
+      "id": "780e5711-1d40-463f-b268-264c4dd11d39",
+      "name": "MongoDB4",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "denver",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        220
+      ],
+      "id": "442f27c5-f83f-413a-bb91-885ce656648b",
+      "name": "MongoDB5",
+      "credentials": {
+        "mongoDb": {
+          "id": "KBytcMvKm7DNd6cU",
+          "name": "MongoDB account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "from": "+12723817477",
+        "to": "+16477787816",
+        "message": "={{ $json.output.Headline }}\n\n{{ $json.output.Body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.twilio",
+      "typeVersion": 1,
+      "position": [
+        320,
+        -280
+      ],
+      "id": "bba4a6df-2a16-4355-bf93-0bededdad4b6",
+      "name": "Twilio",
+      "credentials": {
+        "twilioApi": {
+          "id": "jIzKNRVtpLAm0BOY",
+          "name": "Twilio account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "deepseek-r1:8b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -60
+      ],
+      "id": "6941ca9a-a499-4ec0-b51a-1f0c28e953ef",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "tanw2blWUP28jWkR",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "=City: Toronto\nTemperature: {{ $json.main.temp }}°C\nFeels Like: {{ $json.main.feels_like }}°C\nLow: {{ $json.main.temp_min }}°C\nHigh: {{ $json.main.temp_max }}°C\nHumidity: {{ $json.main.humidity }}%\nCloud Coverage: {{ $json.clouds.all }}%\nWind Speed: {{ $json.wind.speed }} km/h\n\nWrite a short summary in one sentence. Make it human-friendly, casual, and suitable to send via SMS. No more than 75 characters\nAlso say if the day is nice enough to wear a short.",
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"required\": [\"Headline\", \"Body\"],\n  \"properties\": {\n    \"Headline\": { \"type\": \"string\" },\n    \"Body\": { \"type\": \"string\" }}\n  }\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        -260
+      ],
+      "id": "9d99556e-65d7-47f4-bf53-427ced84c30a",
+      "name": "Information Extractor"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "toronto",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "denver",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ha noi",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "da nang",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "sydney",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "markham",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "da nang": {
+      "main": [
+        [
+          {
+            "node": "MongoDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toronto": {
+      "main": [
+        [
+          {
+            "node": "MongoDB2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Information Extractor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "denver": {
+      "main": [
+        [
+          {
+            "node": "MongoDB5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ha noi": {
+      "main": [
+        [
+          {
+            "node": "MongoDB1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sydney": {
+      "main": [
+        [
+          {
+            "node": "MongoDB3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "markham": {
+      "main": [
+        [
+          {
+            "node": "MongoDB4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB5": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB2": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB1": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB3": {
+      "main": [
+        []
+      ]
+    },
+    "MongoDB4": {
+      "main": [
+        []
+      ]
+    },
+    "Twilio": {
+      "main": [
+        []
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Information Extractor",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Information Extractor": {
+      "main": [
+        [
+          {
+            "node": "Twilio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4c09a700-37a6-4fab-9252-47cd2a0dd99c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "06a332869c2aab9655d2910767ec8c7e7b40f796b7d1f8b83fcb933cc2b73214"
+  },
+  "id": "cT0kbtu5JbUQ78UF",
+  "tags": [
+    {
+      "name": "LLM",
+      "id": "gKjKA45HsQ6676zJ",
+      "createdAt": "2025-04-25T01:09:52.739Z",
+      "updatedAt": "2025-04-25T01:09:52.739Z"
+    },
+    {
+      "name": "API",
+      "id": "rwjK9GwCfPXswYQV",
+      "createdAt": "2025-04-24T22:40:59.967Z",
+      "updatedAt": "2025-04-24T22:40:59.967Z"
+    },
+    {
+      "name": "SMS",
+      "id": "wtmd4mcItHi4GD3w",
+      "createdAt": "2025-04-25T01:09:47.344Z",
+      "updatedAt": "2025-04-25T01:09:47.344Z"
+    }
+  ]
+}
